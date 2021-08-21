@@ -1,0 +1,73 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Article Details</h3>
+
+  <div class="float-right">
+    <%= linkTo(articlesPath(), {class: "btn btn-info"}) { %>
+      Back to all Articles
+    <% } %>
+    <%= linkTo(editArticlePath({ article_id: article.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+    <%= linkTo(articlePath({ article_id: article.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+  </div>
+</div>
+
+
+
+<ul class="list-group mb-2 ">
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Guid</label>
+    <p class="d-inline-block"><%= article.Guid %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">FeedURL</label>
+    <p class="d-inline-block"><%= article.FeedURL %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Title</label>
+    <p class="d-inline-block"><%= article.Title %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Description</label>
+    <p class="d-inline-block"><%= article.Description %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Content</label>
+    <p class="d-inline-block"><%= article.Content %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Link</label>
+    <p class="d-inline-block"><%= article.Link %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">ImageURL</label>
+    <p class="d-inline-block"><%= article.ImageURL %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">PublishedAt</label>
+    <p class="d-inline-block"><%= article.PublishedAt %></p>
+  </li>
+
+
+</ul>

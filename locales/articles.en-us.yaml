@@ -1,0 +1,6 @@
+- id: "article.created.success"
+  translation: "Article was successfully created."
+- id: "article.updated.success"
+  translation: "Article was successfully updated."
+- id: "article.destroyed.success"
+  translation: "Article was successfully destroyed."

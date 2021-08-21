@@ -1,0 +1,15 @@
+create_table("articles") {
+	t.Column("id", "int", {primary: true})
+	t.Column("guid", "string", {})
+	t.Column("feed_url", "string", {})
+	t.Column("title", "text", {})
+	t.Column("description", "text", {})
+	t.Column("content", "text", {})
+	t.Column("link", "text", {})
+	t.Column("image_url", "string", {null: true})
+	t.Column("published_at", "timestamp", {})
+	t.Timestamps()
+	t.Index("guid", {"unique": true})
+	t.Index("feed_url", {})
+	t.Index("published_at", {})
+}
