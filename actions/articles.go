@@ -42,6 +42,12 @@ func (v ArticlesResource) List(c buffalo.Context) error {
 	// Default values are "page=1" and "per_page=20".
 	q := tx.PaginateFromParams(c.Params())
 
+	// Add search if requested
+	if c.Param("q") != "" {
+		search := "%" + c.Param("q") + "%"
+		q = q.Where("title ILIKE ? OR description ILIKE ? OR content ILIKE ?", search, search, search)
+	}
+
 	// Retrieve all Articles from the DB
 	if err := q.All(articles); err != nil {
 		return err

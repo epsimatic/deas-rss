@@ -1,33 +1,26 @@
-<div class="py-4 mb-2">
-  <h3 class="d-inline-block">Articles</h3>
-  <div class="float-right">
-    <%= linkTo(newArticlesPath(), {class: "btn btn-primary"}) { %>
-      Create New Article
-    <% } %>
-  </div>
-</div>
+<div class="row article-list-page">
+    <div class="col-4 col-article-list">
+        <div class="list-group mb-3" id="list-tab" role="tablist">
+            <%= for (article) in articles { %>
+            <a class="list-group-item list-group-item-action"
+               id="article-btn-<%= article.ID %>"
+               data-bs-toggle="list" role="tab"
+               href="#article-<%= article.ID %>" aria-controls="article-<%= article.ID %>">
+                <%= article.Title %>
+            </a>
+            <% } %>
+        </div>
 
-<table class="table table-hover table-bordered">
-  <thead class="thead-light">
-    <th>Guid</th><th>FeedURL</th><th>ImageURL</th><th>PublishedAt</th>
-    <th>&nbsp;</th>
-  </thead>
-  <tbody>
-    <%= for (article) in articles { %>
-      <tr>
-        <td class="align-middle"><%= article.Guid %></td><td class="align-middle"><%= article.FeedURL %></td><td class="align-middle"><%= article.ImageURL %></td><td class="align-middle"><%= article.PublishedAt %></td>
-        <td>
-          <div class="float-right">
-            <%= linkTo(articlePath({ article_id: article.ID }), {class: "btn btn-info", body: "View"}) %>
-            <%= linkTo(editArticlePath({ article_id: article.ID }), {class: "btn btn-warning", body: "Edit"}) %>
-            <%= linkTo(articlePath({ article_id: article.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
-          </div>
-        </td>
-      </tr>
-    <% } %>
-  </tbody>
-</table>
-
-<div class="text-center">
-  <%= paginator(pagination) %>
+        <%= paginator(pagination, {class: "justify-content-center flex-wrap"}) %>
+    </div>
+    <div class="col-8 col-article-preview">
+        <div class="tab-content" id="nav-tabContent">
+            <%= for (article) in articles { %>
+            <div class="tab-pane fade" id="article-<%= article.ID %>" role="tabpanel"
+                 aria-labelledby="article-btn-<%= article.ID %>">
+                <%= partial("articles/content.html") %>
+            </div>
+            <% } %>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,20 @@
+<h2 class="article-title"><%= article.Title %></h2>
+<p class="article-date"><time datetime="<%= article.PublishedAt %>"><%= article.PublishedAt %></time></p>
+
+<%= if(article.ImageURL.Valid) { %>
+<li class="list-group-item pb-1">
+    <label class="small d-block">ImageURL</label>
+    <p class="d-inline-block"><%= article.ImageURL %></p>
+</li>
+<% } %>
+
+<div class="article-content">
+    <%= if(len(article.Description) > len (article.Content)) {
+            return raw(article.Description)
+        } else {
+            return raw(article.Content)
+        }
+    %>
+</div>
+
+<p class="article-tools mt-1 text-end"><%= linkTo(article.Link, {class: "btn btn-primary btn-read-more", body: "Read full story →", target: "blank"}) %></p>
