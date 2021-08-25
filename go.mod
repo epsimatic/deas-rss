@@ -3,6 +3,7 @@ module deas_rss
 go 1.17
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/gobuffalo/buffalo v0.17.2
 	github.com/gobuffalo/buffalo-pop/v2 v2.3.0
 	github.com/gobuffalo/envy v1.9.0
@@ -14,9 +15,10 @@ require (
 	github.com/gobuffalo/packr/v2 v2.8.1
 	github.com/gobuffalo/pop/v5 v5.3.4
 	github.com/gobuffalo/suite v2.8.2+incompatible
-	github.com/gobuffalo/validate/v3 v3.1.0
-	github.com/gobuffalo/x v0.0.0-20190224155809-6bb134105960
+	github.com/gobuffalo/validate/v3 v3.3.0
+	github.com/gobuffalo/x v0.1.0
 	github.com/markbates/grift v1.5.0
+	github.com/mmcdole/gofeed v1.1.3
 	github.com/pkg/errors v0.9.1
 	github.com/unrolled/secure v1.0.9
 )
@@ -24,8 +26,9 @@ require (
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/Masterminds/semver/v3 v3.1.1 // indirect
+	github.com/PuerkitoBio/goquery v1.5.1 // indirect
+	github.com/andybalholm/cascadia v1.1.0 // indirect
 	github.com/cockroachdb/cockroach-go v0.0.0-20190925194419-606b3d062051 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/fatih/color v1.12.0 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
@@ -63,6 +66,7 @@ require (
 	github.com/jackc/pgx/v4 v4.11.0 // indirect
 	github.com/jmoiron/sqlx v1.3.3 // indirect
 	github.com/joho/godotenv v1.3.0 // indirect
+	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/karrick/godirwalk v1.16.1 // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/lib/pq v1.10.1 // indirect
@@ -77,6 +81,9 @@ require (
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible // indirect
 	github.com/microcosm-cc/bluemonday v1.0.2 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
+	github.com/mmcdole/goxpp v0.0.0-20181012175147-0068e33feabf // indirect
+	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
+	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/monoculum/formam v0.0.0-20210523135142-1af3317b7b9b // indirect
 	github.com/pelletier/go-toml v1.9.3 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
