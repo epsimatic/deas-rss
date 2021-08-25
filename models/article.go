@@ -25,12 +25,6 @@ type Article struct {
 	UpdatedAt   time.Time    `json:"updated_at" db:"updated_at"`
 }
 
-// String is not required by pop and may be deleted
-func (a Article) String() string {
-	ja, _ := json.Marshal(a)
-	return string(ja)
-}
-
 // Articles is not required by pop and may be deleted
 type Articles []Article
 
@@ -47,8 +41,8 @@ func (a *Article) Validate(tx *pop.Connection) (*validate.Errors, error) {
 		&validators.StringIsPresent{Field: a.Guid, Name: "Guid"},
 		&validators.StringIsPresent{Field: a.FeedURL, Name: "FeedURL"},
 		&validators.StringIsPresent{Field: a.Title, Name: "Title"},
-		&validators.StringIsPresent{Field: a.Description, Name: "Description"},
-		&validators.StringIsPresent{Field: a.Content, Name: "Content"},
+		//&validators.StringIsPresent{Field: a.Description, Name: "Description"},
+		//&validators.StringIsPresent{Field: a.Content, Name: "Content"},
 		&validators.StringIsPresent{Field: a.Link, Name: "Link"},
 		&validators.TimeIsPresent{Field: a.PublishedAt, Name: "PublishedAt"},
 	), nil

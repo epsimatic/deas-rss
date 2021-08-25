@@ -1,6 +1,6 @@
 module deas_rss
 
-go 1.18
+go 1.17
 
 require (
 	github.com/gobuffalo/buffalo v0.17.2
@@ -10,10 +10,14 @@ require (
 	github.com/gobuffalo/mw-forcessl v0.0.0-20200131175327-94b2bd771862
 	github.com/gobuffalo/mw-i18n v1.1.0
 	github.com/gobuffalo/mw-paramlogger v1.0.0
+	github.com/gobuffalo/nulls v0.4.0
 	github.com/gobuffalo/packr/v2 v2.8.1
 	github.com/gobuffalo/pop/v5 v5.3.4
 	github.com/gobuffalo/suite v2.8.2+incompatible
+	github.com/gobuffalo/validate/v3 v3.1.0
+	github.com/gobuffalo/x v0.0.0-20190224155809-6bb134105960
 	github.com/markbates/grift v1.5.0
+	github.com/pkg/errors v0.9.1
 	github.com/unrolled/secure v1.0.9
 )
 
@@ -37,14 +41,12 @@ require (
 	github.com/gobuffalo/httptest v1.5.0 // indirect
 	github.com/gobuffalo/logger v1.0.4 // indirect
 	github.com/gobuffalo/meta v0.3.0 // indirect
-	github.com/gobuffalo/nulls v0.4.0 // indirect
 	github.com/gobuffalo/packd v1.0.0 // indirect
 	github.com/gobuffalo/plush v3.8.3+incompatible // indirect
 	github.com/gobuffalo/plush/v4 v4.1.5 // indirect
 	github.com/gobuffalo/pop v4.13.1+incompatible // indirect
 	github.com/gobuffalo/tags/v3 v3.1.0 // indirect
 	github.com/gobuffalo/validate v2.0.4+incompatible // indirect
-	github.com/gobuffalo/validate/v3 v3.1.0 // indirect
 	github.com/gofrs/uuid v3.2.0+incompatible // indirect
 	github.com/gorilla/handlers v1.5.1 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
@@ -77,7 +79,6 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/monoculum/formam v0.0.0-20210523135142-1af3317b7b9b // indirect
 	github.com/pelletier/go-toml v1.9.3 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rogpeppe/go-internal v1.5.2 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
