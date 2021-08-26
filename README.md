@@ -1,6 +1,41 @@
-# Welcome to Buffalo!
+# DEAS RSS Reader
 
-Thank you for choosing Buffalo for your web development needs.
+Is a simple online reader for RSS feeds
+
+### Operations:
+
+- **Installation and running:**    
+  Follow Buffalo manual below
+
+- **Adding RSS feed:**   
+  ```bash
+  buffalo task rss:fetch {URL} [URL]...
+  ```
+  example:   
+  ```bash
+  buffalo task rss:fetch https://www.feedforall.com/sample.xml
+  ```
+
+- **Updating RSS feed:**
+  ```bash
+  buffalo task rss:fetch {URL} [URL]...
+  ```
+  
+### TODOs:
+
+- Add RSS feed UI
+- Delete oldest feeds on update
+- Mass update
+- Periodic mass update
+- Better article index UI
+- Cleanup article actions
+- Refactor to use actual `feeds` model and table
+- Fix and write tests
+- See TODO / FIXME in code
+
+---
+
+# Buffalo manual
 
 ## Database Setup
 
@@ -22,14 +57,8 @@ Buffalo ships with a command that will watch your application and automatically 
 
 	$ buffalo dev
 
-If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a "Welcome to Buffalo!" page.
+If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a home page.
 
 **Congratulations!** You now have your Buffalo application up and running.
-
-## What Next?
-
-We recommend you heading over to [http://gobuffalo.io](http://gobuffalo.io) and reviewing all of the great documentation there.
-
-Good luck!
 
 [Powered by Buffalo](http://gobuffalo.io)
